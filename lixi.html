@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+</head>
+
+<style type="text/css">
+  .vertical-center {
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; /* These two lines are counted as one 🙂       */
+    display: flex;
+    align-items: center;
+    background-image: url(./hinh-anh-chuc-tet-2019.jpg);
+    background-repeat: round;
+  }
+  @media (min-width: 1200px) {
+    .container {
+        max-width: 715px;
+    }
+  }   
+  .card-value {
+    margin-top: 41px;
+  }
+
+  .flip-container {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+  /*  UPDATED! flip the pane when hovered */
+  /*.flip-container:hover .back {
+    transform: rotateY(0deg);
+  }
+  .flip-container:hover .front {
+      transform: rotateY(180deg);
+  }*/
+
+.flip-container, .front, .back {
+  width: 100%;
+  height: 100%;
+}
+
+/* flip speed goes here */
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+
+  position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+  backface-visibility: hidden;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/*  UPDATED! front pane, placed above back */
+.front {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+  transform: rotateY(-180deg);
+} 
+</style>
+<body class="vertical-center">
+ 
+<div class="container">  
+   <div class="row">
+    <div class="card col-md-3">
+      <div class="flip-container" id="flip-toggle">
+        <div class="flipper" style="height: 160px">
+          <div class="front">
+            <img class="card-img-top" src="./bao-li-xi.jpg" alt="Card image cap">    
+          </div>
+          <div class="back">      
+            <img class="card-img-top card-value" src="./100k.gif" alt="Card image cap">    
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card col-md-3">
+      <div class="flip-container" id="flip-toggle">
+        <div class="flipper" style="height: 160px">
+          <div class="front">
+            <img class="card-img-top" src="./bao-li-xi.jpg" alt="Card image cap">    
+          </div>
+          <div class="back">      
+            <img class="card-img-top card-value" src="./200k.jpg" alt="Card image cap">    
+          </div>
+        </div>
+      </div>
+    </div>
+
+   <div class="card col-md-3">
+      <div class="flip-container" id="flip-toggle">
+        <div class="flipper" style="height: 160px">
+          <div class="front">
+            <img class="card-img-top" src="./bao-li-xi.jpg" alt="Card image cap">    
+          </div>
+          <div class="back">      
+            <img class="card-img-top card-value" src="./500k.jpg" alt="Card image cap">    
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card col-md-3">
+      <div class="flip-container" id="flip-toggle">
+        <div class="flipper" style="height: 160px">
+          <div class="front">
+            <img class="card-img-top" src="./bao-li-xi.jpg" alt="Card image cap">    
+          </div>
+          <div class="back">      
+            <img class="card-img-top card-value" src="./100k.gif" alt="Card image cap">    
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <div class="row">
+    <div class="card col-md-3">
+      <div class="flip-container" id="flip-toggle">
+        <div class="flipper" style="height: 160px">
+          <div class="front">
+            <img class="card-img-top" src="./bao-li-xi.jpg" alt="Card image cap">    
+          </div>
+          <div class="back">      
+            <img class="card-img-top card-value" src="./50k.jpg" alt="Card image cap">    
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card col-md-3">
+      <div class="flip-container" id="flip-toggle">
+        <div class="flipper" style="height: 160px">
+          <div class="front">
+            <img class="card-img-top" src="./bao-li-xi.jpg" alt="Card image cap">    
+          </div>
+          <div class="back">      
+            <img class="card-img-top card-value" src="./200k.jpg" alt="Card image cap">    
+          </div>
+        </div>
+      </div>
+    </div>
+
+   <div class="card col-md-3">
+      <div class="flip-container" id="flip-toggle">
+        <div class="flipper" style="height: 160px">
+          <div class="front">
+            <img class="card-img-top" src="./bao-li-xi.jpg" alt="Card image cap">    
+          </div>
+          <div class="back">      
+            <img class="card-img-top card-value" src="./100k.gif" alt="Card image cap">    
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card col-md-3">
+      <div class="flip-container" id="flip-toggle">
+        <div class="flipper" style="height: 160px">
+          <div class="front">
+            <img class="card-img-top" src="./bao-li-xi.jpg" alt="Card image cap">    
+          </div>
+          <div class="back">      
+            <img class="card-img-top card-value" src="./100k.gif" alt="Card image cap">    
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="card col-md-3">
+      <div class="flip-container" id="flip-toggle">
+        <div class="flipper" style="height: 160px">
+          <div class="front">
+            <img class="card-img-top" src="./bao-li-xi.jpg" alt="Card image cap">    
+          </div>
+          <div class="back">      
+            <img class="card-img-top card-value" src="./200k.jpg" alt="Card image cap">    
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card col-md-3">
+      <div class="flip-container" id="flip-toggle">
+        <div class="flipper" style="height: 160px">
+          <div class="front">
+            <img class="card-img-top" src="./bao-li-xi.jpg" alt="Card image cap">    
+          </div>
+          <div class="back">      
+            <img class="card-img-top card-value" src="./100k.gif" alt="Card image cap">    
+          </div>
+        </div>
+      </div>
+    </div>
+
+   <div class="card col-md-3">
+      <div class="flip-container" id="flip-toggle">
+        <div class="flipper" style="height: 160px">
+          <div class="front">
+            <img class="card-img-top" src="./bao-li-xi.jpg" alt="Card image cap">    
+          </div>
+          <div class="back">      
+            <img class="card-img-top card-value" src="./200k.jpg" alt="Card image cap">    
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card col-md-3">
+      <div class="flip-container" id="flip-toggle">
+        <div class="flipper" style="height: 160px">
+          <div class="front">
+            <img class="card-img-top" src="./bao-li-xi.jpg" alt="Card image cap">    
+          </div>
+          <div class="back">      
+            <img class="card-img-top card-value" src="./200k.jpg" alt="Card image cap">    
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row" style="justify-content: center;margin-top: 20px;background: red">
+    <span style="color: white">Cơ cấu: 1: 500k    5: 200k    5: 100k   1: 50k</span>
+  </div>
+  <div class="row" style="justify-content: center;margin-top: 20px;">
+    <button class="btn btn-success">Random</button>
+  </div>
+</div>
+
+</body>
+<script type="text/javascript">
+  var timeout;
+  var old_font_card = "";
+  var old_back_card = "";
+
+  $(document).ready(function() {
+    $(".card").click(function() {
+      var flip_container = $(this).find('.flip-container');
+
+      if(old_font_card != "" && old_back_card != "") {
+        old_font_card.css('transform','rotateY(0deg)');
+        old_back_card.css('transform','rotateY(180deg)');      
+      }
+      
+      old_font_card = flip_container.find('div.flipper div.front');
+      old_back_card = flip_container.find('div.flipper div.back');      
+
+      old_font_card.css('transform','rotateY(180deg)');
+      old_back_card.css('transform','rotateY(0deg)');      
+
+      clearTimeout(timeout);
+
+      timeout = setTimeout(function(){
+        old_font_card.css('transform','rotateY(0deg)');
+        old_back_card.css('transform','rotateY(180deg)');      
+      }, 2000);
+    });
+  })
+</script>
+</html>
